@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+<title>Electroride Online EV showroom</title>
+<style text/css>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
+html{
+  -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: #cccccca3; */
+}
+/* End extract */
+
+html,body{
+    font-family:Verdana,sans-serif;
+    font-size:15px;
+    line-height:1.5;
+}
+
+.ev-bar .ev-button {
+  padding: 16px;
+}
+/* Ev.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+html{
+  box-sizing:border-box;
+}
+*,*:before,*:after{
+  box-sizing:inherit;
+}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Segoe UI",Arial,sans-serif;
+    font-weight:400;
+    margin: 0;
+}
+.ev-wide{
+    letter-spacing:4px;
+}
+
+.ev-top {
+      position: relative;
+      width: 100%;
+      z-index: 1000;
+    }
+
+/* Style the rest of your navigation bar as needed */
+.ev-bar .ev-button {
+  padding: 16px;
+}
+
+/* Your other styles here */
+
+.ev-btn,.ev-button{
+    border:none;
+    display:inline-block;
+    padding:8px 16px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+
+.ev-sidebar{
+    height:100%;
+    width:200px;
+    background-color:rgb(255, 255, 255);
+    position:fixed!important;
+    z-index:1;
+    overflow:auto;
+}
+
+
+.ev-bar-block .ev-bar-item{
+    width:100%;
+    display:block;
+    padding:8px 16px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0;
+    border-bottom: 1px solid;
+}
+
+@media (max-width:1205px){
+    .ev-auto{
+        max-width:95%;
+    }
+}
+@media (max-width:600px)
+{
+  .ev-modal-content
+    {
+        margin:0 10px;width:auto!important;
+    }
+.ev-hide-small{
+    display:none!important;
+}
+}
+@media (max-width:768px){
+    .ev-modal-content{
+        width:500px;
+    }
+    .ev-modal{
+        padding-top:50px;
+    }
+}
+@media (min-width:993px){
+    .ev-modal-content{
+        width:900px;
+    }
+    .ev-hide-large{
+        display:none!important;
+    }
+    .ev-sidebar.ev-collapse{
+        display:block!important;
+    
+    }
+}
+@media (max-width:992px) and (min-width:601px)
+{
+    .ev-hide-medium{
+        display:none!important;
+    }
+}
+@media (max-width:992px){
+    .ev-sidebar.ev-collapse{
+        display:none;
+    }
+    .ev-main{
+        margin-left:0!important;
+        margin-right:0!important;
+    }
+    .ev-auto{
+        max-width:100%;
+    }
+}
+
+.ev-card,.ev-card-2{
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.ev-animate-left{
+    position:relative;
+    animation:ev-animateleft 0.4s;
+}
+@keyframes ev-animateleft{
+    from{
+        left:-300px;opacity:0;
+    }
+     to{
+        left:0;opacity:1;
+    }
+}
+
+
+
+.ev-right {
+   float: right !important;
+   }
+.ev-button:hover { 
+  color: #000 !important;
+   background-color: #ccc !important;
+   }
+.ev-transparent, .ev-hover-none:hover { background-color: transparent !important; }
+.ev-hover-none:hover { box-shadow: none !important; }
+
+.ev-black,
+.ev-hover-black:hover {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+.ev-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center; */
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ev-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.ev-bar {
+  background-color: white; /* Make the navbar transparent */
+  transition: background-color 0.3s ease; /* Add transition for a smooth effect */
+}
+
+.ev-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Adjust the color and opacity as needed */
+  z-index: -1;
+}
+.ev-frontpage-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./ola-e-bike--768x512.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative;
+}
+         .contact-info,
+        .company-info {
+          
+              width: 100%;
+             padding: 20px; 
+            color: #fff;
+            
+        } 
+
+        .contact-info {
+            background-color: rgb(57, 49, 49);
+        }
+
+        .company-info {
+            background-color: #5c312b;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        i {
+    margin-right: 10px; /* Adjust the margin as needed */
+          }
+
+        .ev-contact-form {
+            display: flex;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .ev-contact-form form {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+        }
+
+        .ev-contact-form legend {
+            color: white;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        .ev-contact-form fieldset {
+            border-radius: 10px;
+        }
+
+        .ev-contact-form input {
+            all:unset;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px;
+            background: none;
+            border-bottom: 1px solid white;
+            color: white;
+            text-transform: capitalize;
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 2px;
+        }
+
+        .ev-contact-form input::placeholder {
+            color: #ffffff9b;
+        }
+
+        .ev-contact-form .submit-btn {
+            width: 100px;
+            border: none;
+            border-radius: opx;
+            background-color:rgb(27, 196, 27);
+            display: flex;
+        }
+        .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media i {
+    color: white;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin: 5px; /* Adjust the margin as needed */
+    text-decoration: none;
+}
+        /* Add this at the end of your existing CSS */
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .ev-contact-form {
+        flex-direction: column;
+    }
+
+    .ev-contact-form form {
+        width: 100%;
+    }
+
+    .contact-info,
+    .company-info {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .ev-contact-form .submit-btn {
+        width: 100px;
+    }
+}
+
+/* Media query for screens between 601px and 992px */
+@media (min-width: 601px) and (max-width: 992px) {
+    .ev-contact-form {
+        flex-direction: column;
+    }
+
+    .ev-contact-form form {
+        width: 100%;
+    }
+}
+
+/* Media query for screens larger than 992px */
+@media (min-width: 993px) {
+    .ev-contact-form {
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+
+    .ev-contact-form form {
+        width: 48%;
+    }
+
+    .contact-info,
+    .company-info {
+        width: 48%;
+    }
+}
+
+    </style>
+    </head>
+    <body>
+<!-- Navbar (sit on top) -->
+<div class="ev-top">
+    <div class="ev-bar ev-white ev-card" id="myNavbar">
+      <a href="#home" class="ev-bar-item ev-button ev-wide">ELECTRORIDE</a>
+  
+      <!-- Right-sided navbar links -->
+      <div class="ev-right ev-hide-small">
+        <a href="index3.html" class="ev-bar-item ev-button">ABOUT</a>
+  
+        <a href="gallery and prces.html" class="ev-bar-item ev-button"><i class="fa fa-inr"></i>GALLERY&PRICING</a>
+        <a href="contact-form.html" class="ev-bar-item ev-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="feedback.html" class="ev-bar-item ev-button"><i class="fa fa-comment"></i>FEEDBACK</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="ev-bar-item ev-button ev-right ev-hide-large ev-hide-medium" onclick="ev_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <nav class="ev-sidebar ev-bar-block ev-black ev-card ev-animate-left ev-hide-medium ev-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="ev_close()" class="ev-bar-item ev-button ev-large ev-padding-16">Close ×</a>
+    <a href="#about" onclick="ev_close()" class="ev-bar-item ev-button">ABOUT</a>
+    <a href="#pricing" onclick="ev_close()" class="ev-bar-item ev-button">GALLERY&PRICING</a>
+    <a href="#contact" onclick="ev_close()" class="ev-bar-item ev-button">CONTACT</a>
+    <a href="#contact" onclick="ev_close()" class="ev-bar-item ev-button">FEEDBACK</a>
+  </nav>
+  
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    
+    function ev_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+    // 
+    // Close the sidebar with the close button
+    function ev_close() {
+        mySidebar.style.display = "none";
+    }
+  </script>
+      
+    <section class="ev-frontpage-section">
+        <div class="e-frontpage">
+            <div class="ev-contact-form">
+                <div class="contact-info">
+                    <form  name="contact-us">
+    
+                        <input type="text" name="name" placeholder="Enter Your Name" required autocomplete="on">
+                                            <input type="number" name="phone" placeholder="123-456-7890" required autocomplete="on">
+                                            <input type="email" name="email" placeholder="electroride@gmail.com" autocomplete="on" style="text-transform: none;">
+
+                                            <input type="text" name="vehicle" placeholder="ola" autocomplete="on">
+                                            <input type="text" name="place" placeholder="banglore" autocomplete="on">
+
+                                            
+                                        
+
+                                            <input class="submit-btn" type="submit" value="send request" style="cursor: pointer;">
+                        <!-- <button type="submit">Send</button> -->
+                      </form>
+                      <script>
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbyMW4npwcJPaW4TX27f0BD4b6WyCUVIN7J6G0BtyguNaXUtBx04zVm9Z5toVAWtlST2qQ/exec'
+                        const form = document.forms['contact-us']
+                      
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => console.log('Success!', response))
+                            .catch(error => console.error('Error!', error.message))
+                        })
+                      </script>
+        </div>
+        <div class="company-info">
+            <h2><strong>Immediate contact information</strong></h2>
+
+           <p><i class="fa-solid fa-location-dot"></i><strong>Address:-</strong>sri siddartha institute of technology,maralur,tumkur. </p>
+
+           <p><i class="fa-solid fa-phone"></i><strong>Phone:-</strong> +91 123 456 7890 </p>
+
+           <p><i class="fa-regular fa-envelope"></i><strong>Mail:-</strong>evelectroride@gmail.com </p>
+
+           <p><i class="fa-solid fa-earth-oceania"></i><strong>Website:-</strong>electroride.com </p>
+       
+           <span class="social-media">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"> <i class="fa-brands fa-google"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></</span>
+        </div>
+        </div>
+        </div>
+    </form>
+    </section>
+    </body>
+    </html>
